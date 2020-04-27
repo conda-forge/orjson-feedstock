@@ -13,7 +13,7 @@ source:
     folder: rust-nightly
 
 build:
-  number: 0
+  number: 1
   skip:  True  # [osx or win or py<35]
 
 requirements:
