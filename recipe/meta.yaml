@@ -1,5 +1,5 @@
 {% set name = "orjson" %}
-{% set version = "3.6.0" %}
+{% set version = "3.6.1" %}
 {% set rust_nightly_version = "2021-01-11" %}
 
 package:
@@ -8,9 +8,9 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: 367bf36a5f9c461c4f8f5f679ac6a36d31fa73aa11bf8ea82d3ceec3121a2abe
-  - url: https://static.rust-lang.org/dist/{{ rust_nightly_version }}/rust-nightly-x86_64-unknown-linux-gnu.tar.gz  # [linux64]
-    sha256: 32c22b990b9526593dfb0471fb318a05fce6b5c763d83809d485a656e41deb96  # [linux64]
+    sha256: 5ee598ce6e943afeb84d5706dc604bf90f74e67dc972af12d08af22249bd62d6
+  - url: https://static.rust-lang.org/dist/{{ rust_nightly_version }}/rust-nightly-x86_64-unknown-linux-gnu.tar.xz  # [linux64]
+    sha256: c04f8eb225eb16aa6847c7dac0b9ca6c03171773157f84023c6c2934df5ca050  # [linux64]
   - url: https://static.rust-lang.org/dist/{{ rust_nightly_version }}/rust-nightly-powerpc64le-unknown-linux-gnu.tar.gz  # [ppc64le]
     sha256: 67f13b843e4c530b0c61a17bcc5372ac4f45f9b2291adea0ee3bf7e7c1e8bfe2  # [ppc64le]
   - url: https://static.rust-lang.org/dist/{{ rust_nightly_version }}/rust-nightly-aarch64-unknown-linux-gnu.tar.gz  # [aarch64]
