@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/o/orjson/orjson-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/o/orjson/orjson-{{ version }}.tar.gz
   sha256: 37949383c4df7b4337ce82ee35b6d7471e55195efa7dcb45ab8226ceadb0fe3b
 
 build:
