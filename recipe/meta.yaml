@@ -1,4 +1,4 @@
-{% set version = "3.10.11" %}
+{% set version = "3.10.12" %}
 
 package:
   name: orjson
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/o/orjson/orjson-{{ version }}.tar.gz
-  sha256: e35b6d730de6384d5b2dab5fd23f0d76fae8bbc8c353c2f78210aa5fa4beb3ef
+  sha256: 0a78bbda3aea0f9f079057ee1ee8a1ecf790d4f1af88dd67493c6b8ee52506ff
 
 build:
-  number: 1
+  number: 0
   script:
     - {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --disable-pip-version-check
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
