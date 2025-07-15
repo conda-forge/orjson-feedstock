@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 3.10.18
+  version: "3.11.0"
 
 package:
   name: orjson
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/o/orjson/orjson-${{ version }}.tar.gz
-  sha256: e8da3947d92123eda795b68228cafe2724815621fe35e8e320a9e9593a4bcd53
+  sha256: 2e4c129da624f291bcc607016a99e7f04a353f6874f3bd8d9b47b88597d5f700
 
 build:
-  number: 1
+  number: 0
   script:
     - ${{ PYTHON }} -m pip install . --no-deps --no-build-isolation --disable-pip-version-check
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
@@ -20,13 +20,11 @@ build:
 requirements:
   build:
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
-    - if: build_platform != target_platform
-      then: crossenv
-    - if: build_platform != target_platform
-      then: maturin >=1,<2
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - crossenv
+        - maturin >=1,<2
     - ${{ compiler("c") }}
     - ${{ compiler("rust") }}
     - ${{ stdlib("c") }}
