@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "3.11.0"
+  version: "3.11.1"
 
 package:
   name: orjson
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/o/orjson/orjson-${{ version }}.tar.gz
-  sha256: 2e4c129da624f291bcc607016a99e7f04a353f6874f3bd8d9b47b88597d5f700
+  sha256: 48d82770a5fd88778063604c566f9c7c71820270c9cc9338d25147cbf34afd96
 
 build:
   number: 0
