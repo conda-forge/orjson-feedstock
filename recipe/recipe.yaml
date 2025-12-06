@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "3.11.4"
+  version: "3.11.5"
 
 package:
   name: orjson
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/o/orjson/orjson-${{ version }}.tar.gz
-  sha256: 39485f4ab4c9b30a3943cfe99e1a213c4776fb69e8abd68f66b83d5a0b0fdc6d
+  sha256: 82393ab47b4fe44ffd0a7659fa9cfaacc717eb617c93cde83795f14af5c2e9d5
 
 build:
-  number: 1
+  number: 0
   script:
     # fix for upstream maturin issue
     - if: build_platform != target_platform and unix and python is startingwith('3.14')
