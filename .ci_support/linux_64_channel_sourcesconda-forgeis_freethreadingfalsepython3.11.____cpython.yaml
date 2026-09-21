@@ -23,7 +23,8 @@ python:
 rust_compiler:
 - rust
 target_platform:
-- linux-aarch64
+- linux-64
 zip_keys:
 - - python
+  - channel_sources
   - is_freethreading
